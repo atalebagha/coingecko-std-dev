@@ -1,0 +1,17 @@
+{
+  "name": "@crypto-pricing/core",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "sst bind vitest",
+    "typecheck": "tsc -noEmit"
+  },
+  "devDependencies": {
+    "vitest": "^2.1.2",
+    "@types/node": "^22.7.5",
+    "sst": "^3.2.10"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}
