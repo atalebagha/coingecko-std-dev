@@ -1,9 +1,8 @@
-We'll be paying close attention to your README, please spent time writing it up. Include:
-Instructions on how to run the service (we expect you have been running it during development. We will attempt to run it, but we also understand that there may be some environmental differences)
 # TODOs
 
 ## Architecture
   - EventBus + Lambda to trigger an event every minute
+  - I made a request to an api that returns coin values in USD, so for this case all coins are compared to USD.
   - Coin values are persisted to DynamoDB which triggers an event stream
   - Event stream invokes standard deviation lambda (batched)
   - Time of initial event is persisted throughout the cycle to preserve original time (even though the delay in the stddev calculation)
@@ -15,6 +14,8 @@ Instructions on how to run the service (we expect you have been running it durin
 
 ## Potential enhancements
   - purge older data
+  - Use an API(s) that matches coins with non USD coins
+  - Possibly calculate coin comparisons based on USD values instead of invoking another API
   - observability
   - Multiple lambda jobs, rather than 1 lambda invoke to get 250 coins, have multiple invoke at the same time
    
